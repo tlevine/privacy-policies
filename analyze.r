@@ -1,10 +1,11 @@
 read.terms <- function() {
-  t <- read.csv('docracy-tos-tracker-allversions.csv', stringsAsFactors = FALSE)
+  filename <- 'docracy-tos-tracker-allversions.csv'
+  t <- read.csv(filename, stringsAsFactors = FALSE, allowEscapes = TRUE)
   t$title <- factor(t$title)
 # t$created <- as.POSIXct(t$created)
   t
 }
 
-if (!('terms' %in% ls())) {
+if (!('t' %in% ls())) {
   t <- read.terms()
 }
