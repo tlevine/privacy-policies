@@ -1,0 +1,2 @@
+#!/bin/sh
+sed -i -e '/^"$/ d' -e 's/$/"/' docracy-tos-tracker-allversions.csv
